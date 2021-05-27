@@ -1,0 +1,36 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                    "${workspaceRoot}",
+                    "${workspaceRoot}/external/compiler/mingw64/include/*",
+                    "${workspaceRoot}/external/SDL2/x86_64-w64-mingw32/include/SDL2",
+                    "${workspaceRoot}/external/SDL2/x86_64-w64-mingw32/lib",
+                    "${workspaceRoot}/external/SDL2_image/x86_64-w64-mingw32/lib",
+                    "${workspaceRoot}/external/SDL2_image/x86_64-w64-mingw32/include/SDL2"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE"
+            ],
+            "browse": {
+                "path": [
+                    "${workspaceRoot}",
+                    "${workspaceRoot}/external/compiler/mingw64/include/*",
+                    "${workspaceRoot}/external/SDL2/x86_64-w64-mingw32/include/SDL2",
+                    "${workspaceRoot}/external/SDL2/x86_64-w64-mingw32/lib",
+                    "${workspaceRoot}/external/SDL2_image/x86_64-w64-mingw32/lib",
+                    "${workspaceRoot}/external/SDL2_image/x86_64-w64-mingw32/include/SDL2"
+                ],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            },
+            "intelliSenseMode": "windows-gcc-x64",
+            // "compilerPath": "${workspaceRoot}/external/compiler/mingw64/bin/x86_64-w64-mingw32-c++.exe",
+            "cStandard": "gnu17",
+            "cppStandard": "gnu++17"
+        }
+    ],
+    "version": 4
+}
