@@ -1,4 +1,4 @@
-# THIS REPO is set up for managing and running SDL C++ Programs in VSCode
+# SDL C++ Programs in VSCode
 ---
 ## .vscode
 ### c_cpp_properties.json
