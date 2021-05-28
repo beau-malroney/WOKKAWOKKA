@@ -13,7 +13,7 @@
 >Various VSCode settings
 
 ###tasks.json
->compile -- includes compile options and includes/libs
+>compile -- includes compile options and includes/libs -- -mwindows hides the console - uncomment this if you don't want to see the console output
 >copy    -- copies dlls needed for running the executes
 >clean   -- cleans files from the build directories
 

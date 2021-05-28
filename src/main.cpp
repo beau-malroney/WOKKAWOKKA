@@ -1,17 +1,16 @@
 #include <SDL.h>
 #include <SDL_image.h>
 #include <SDL_timer.h>
-#include <iostream>
 
 
 int main(int argc, char *argv[])
 {  
-    std::cout << "Hello!";
+    SDL_Log("Hello World!");
 
     // retutns zero on success else non-zero
     if (SDL_Init(SDL_INIT_EVERYTHING) != 0)
     {
-        printf("error initializing SDL: %s\n", SDL_GetError());
+        SDL_Log("error initializing SDL: %s\n", SDL_GetError());
     }
     SDL_Window *win = SDL_CreateWindow("GAME", // creates a window
                                        SDL_WINDOWPOS_CENTERED,
@@ -35,7 +34,7 @@ int main(int argc, char *argv[])
     surface = IMG_LoadGIF_RW(rwop);
     if (!surface)
     {
-        printf("IMG_LoadGIF_RW: %s\n", IMG_GetError());
+        SDL_Log("IMG_LoadGIF_RW: %s\n", IMG_GetError());
         // handle error
     }
 
