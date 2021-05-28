@@ -1,10 +1,12 @@
 #include <SDL.h>
 #include <SDL_image.h>
 #include <SDL_timer.h>
-#include <cstdio>
+#include <iostream>
+
 
 int main(int argc, char *argv[])
-{
+{  
+    std::cout << "Hello!";
 
     // retutns zero on success else non-zero
     if (SDL_Init(SDL_INIT_EVERYTHING) != 0)
@@ -26,8 +28,16 @@ int main(int argc, char *argv[])
     // creates a surface to load an image into the main memory
     SDL_Surface *surface;
 
-    // please provide a path for your image
-    surface = IMG_Load("path");
+
+    // load gif into image
+    SDL_RWops * rwop;
+    rwop = SDL_RWFromFile("media/images/alien1.gif", "rb");
+    surface = IMG_LoadGIF_RW(rwop);
+    if (!surface)
+    {
+        printf("IMG_LoadGIF_RW: %s\n", IMG_GetError());
+        // handle error
+    }
 
     // loads image to our graphics hardware memory.
     SDL_Texture *tex = SDL_CreateTextureFromSurface(rend, surface);

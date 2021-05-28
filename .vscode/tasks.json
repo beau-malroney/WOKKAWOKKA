@@ -8,17 +8,17 @@
             "presentation": {
                 "echo": true,
                 "reveal": "always",
-                "panel": "new"
+                "panel": "shared"
             },
         },
         {
             "label": "cleanScript",
             "type": "shell",
-            "command": ".\\${workspaceRoot}\\scripts\\clean.bat",
+            "command": ".\\scripts\\clean.bat",
             "presentation": {
                 "echo": true,
                 "reveal": "always",
-                "panel": "new"
+                "panel": "shared"
             },
         },
         {
@@ -60,10 +60,23 @@
             ]
         },
         {
+            "label": "copy_media",
+            "type": "shell",
+            "command": "xcopy",
+            "args": [
+                "/y",
+                "/S",
+                "/I",
+                "/E",
+                "${workspaceRoot}\\media",
+                "${workspaceRoot}\\build\\media\\."
+            ]
+        },
+        {
             "label": "build",
             "type": "shell",
             "dependsOrder": "sequence",
-            "dependsOn": ["clean","compile","copy_sdl_dll","copy_sdl_image_dll"]
+            "dependsOn": ["cleanScript","compile","copy_sdl_dll","copy_sdl_image_dll","copy_media"]
         }
     ]
 }

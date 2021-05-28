@@ -9,7 +9,8 @@
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
-            "environment": [],            
+            "environment": [],     
+            "externalConsole": true,       
             "MIMode": "gdb",
             "miDebuggerPath": "${workspaceRoot}/external/compiler/mingw64/bin/gdb.exe",
             "setupCommands": [
